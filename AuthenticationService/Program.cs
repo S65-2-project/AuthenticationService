@@ -2,10 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AuthenticationService.Endpoints;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using RabbitMQ.Client;
 
 namespace AuthenticationService
 {
@@ -13,6 +15,8 @@ namespace AuthenticationService
     {
         public static void Main(string[] args)
         {
+            RabbitConnectionFactory factory = new RabbitConnectionFactory();
+            RabbitQueueReader queue = new RabbitQueueReader(factory);
             CreateHostBuilder(args).Build().Run();
         }
 
