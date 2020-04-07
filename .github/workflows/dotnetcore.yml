@@ -4,7 +4,7 @@ on: [pull_request]
 
 jobs:
   build:
-    runs-on: windows-2019
+    runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET Core
@@ -20,7 +20,7 @@ jobs:
 
   delivery:
     needs: build
-    runs-on: windows-2019
+    runs-on: ubuntu-18.04
     steps:
       - name: Git checkout
         uses: actions/checkout@v2
