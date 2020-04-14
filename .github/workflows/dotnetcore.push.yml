@@ -1,6 +1,11 @@
-name: .NET Core
+name: .NET Core on push
 
-on: [pull_request]
+on:
+  push:
+    branches:
+      - "*"
+      - "!master"
+      - "!develop"
 
 jobs:
   build:
