@@ -19,7 +19,7 @@ namespace AuthenticationService.MessageHandlers
         {
             Console.WriteLine("Yoinkpik");
             
-            _publisher.PublishMessageAsync("EmailService", "test", "poepje");
+           // _publisher.PublishMessageAsync("EmailService", "test", "poepje");
             
             return Task.CompletedTask;
         }
