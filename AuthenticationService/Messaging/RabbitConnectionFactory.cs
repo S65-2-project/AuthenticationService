@@ -1,7 +1,7 @@
 ﻿using System;
 using RabbitMQ.Client;
 
-namespace AuthenticationService.Endpoints
+namespace AuthenticationService.Messaging
 {
     public class RabbitConnectionFactory
     {
