@@ -4,7 +4,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Konscious.Security.Cryptography;
 
-namespace UserService.Helpers
+namespace AuthenticationService.Helpers
 {
     public class Hasher : IHasher
     {

@@ -24,8 +24,6 @@ namespace AuthenticationService.Messaging
             /// </summary>
             Task IMessageHandler.HandleMessageAsync(string messageType, byte[] obj)
             {
-                Console.WriteLine("DESERIALIZED");
-                Console.WriteLine(JsonSerializer.Deserialize<TMessage>(obj));
                 return HandleMessageAsync(messageType, JsonSerializer.Deserialize<TMessage>(obj));
             }
 
