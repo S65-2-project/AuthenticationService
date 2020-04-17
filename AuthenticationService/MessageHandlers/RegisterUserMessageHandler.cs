@@ -17,14 +17,17 @@ namespace AuthenticationService.MessageHandlers
             _publisher = publisher;
             _userService = userService;
         }
-
+        /// <summary>
+        /// recieves messages send to messagetype RegisterUser
+        /// </summary>
+        /// <param name="messageType"></param>
+        /// <param name="message"></param>
+        /// <returns></returns>
         public Task HandleMessageAsync(string messageType, RegisterUser message)
         {
-            Console.WriteLine("Message Recieved!");
             _userService.InsertRegisteredUser(message.Id, message.Email, message.Password);
-           // _publisher.PublishMessageAsync("EmailService", "test", "poepje");
-            
-            return Task.CompletedTask;
+           // _publisher.PublishMessageAsync("routingkey", "messagetype", "value");
+           return Task.CompletedTask;
         }
     }
 }

@@ -16,17 +16,18 @@ namespace AuthenticationService.Services
             _hasher = hasher;
             _repository = repository;
         }
-
+        
         public async Task InsertRegisteredUser(Guid id, string email, string password)
         {
-
+            //hash the password. 
             var salt = _hasher.CreateSalt();
-            var hasedPassword = await _hasher.HashPassword(password, salt);
+            var hashedPassword = await _hasher.HashPassword(password, salt);
+            //Create new User object and send to repository
             var user = new User()
             {
                 Id = id,
                 Email = email,
-                Password = hasedPassword,
+                Password = hashedPassword,
                 Salt = salt
             };
             

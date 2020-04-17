@@ -73,12 +73,18 @@
       <e p="AuthenticationServiceTest" t="IncludeRecursive">
         <e p="AuthenticationServiceTest.csproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Helpers" t="Include">
+          <e p="HasherTest.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
               <e p="AuthenticationServiceTest.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
+        </e>
+        <e p="Services" t="Include">
+          <e p="UserServiceTest.cs" t="Include" />
         </e>
         <e p="UnitTest1.cs" t="Include" />
       </e>
