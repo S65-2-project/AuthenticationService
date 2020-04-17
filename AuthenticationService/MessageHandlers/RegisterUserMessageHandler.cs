@@ -17,7 +17,7 @@ namespace AuthenticationService.MessageHandlers
 
         public Task HandleMessageAsync(string messageType, RegisterUser message)
         {
-            Console.WriteLine("Yoinkpik");
+            Console.WriteLine("Message Recieved!");
             
            // _publisher.PublishMessageAsync("EmailService", "test", "poepje");
             

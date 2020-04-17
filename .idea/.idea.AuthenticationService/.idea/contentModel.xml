@@ -20,6 +20,9 @@
         <e p="Controllers" t="Include">
           <e p="WeatherForecastController.cs" t="Include" />
         </e>
+        <e p="DatastoreSettings" t="Include">
+          <e p="UserstoreDatabaseSettings.cs" t="Include" />
+        </e>
         <e p="MessageHandlers" t="Include">
           <e p="RegisterUserMessageHandler.cs" t="Include" />
         </e>
@@ -47,6 +50,14 @@
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Repositories" t="Include">
+          <e p="IUserRepository.cs" t="Include" />
+          <e p="UserRepository.cs" t="Include" />
+        </e>
+        <e p="Services" t="Include">
+          <e p="IUserService.cs" t="Include" />
+          <e p="UserService.cs" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
         <e p="WeatherForecast.cs" t="Include" />
