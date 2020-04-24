@@ -4,5 +4,13 @@
         <TargetFramework>netcoreapp3.1</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Konscious.Security.Cryptography.Argon2" Version="1.2.1" />
+      <PackageReference Include="MongoDB.Bson" Version="2.10.3" />
+      <PackageReference Include="MongoDB.Driver" Version="2.10.3" />
+      <PackageReference Include="MongoDB.Driver.Core" Version="2.10.3" />
+      <PackageReference Include="RabbitMQ.Client" Version="5.1.2" />
+    </ItemGroup>
+
 
 </Project>
