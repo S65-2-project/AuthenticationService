@@ -25,9 +25,7 @@ namespace AuthenticationService.Messaging
                     };
                     _connection = factory.CreateConnection();
                 }
-
                 return _connection;
-
             }
 
     }

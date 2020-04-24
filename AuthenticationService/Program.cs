@@ -17,8 +17,6 @@ namespace AuthenticationService
 
         public static void Main(string[] args)
         {
-            // RabbitConnectionFactory factory = new RabbitConnectionFactory();
-            // RabbitQueueReader queue = new RabbitQueueReader(factory);
             CreateHostBuilder(args).Build().Run();
 
         }

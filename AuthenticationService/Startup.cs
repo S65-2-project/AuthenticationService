@@ -38,8 +38,7 @@ namespace AuthenticationService
                 builder => builder.WithHandler<RegisterUserMessageHandler>("RegisterUser"));
             
             services.AddMessagePublisher();
-                
-                
+            
             services.AddTransient<IHasher, Hasher>();
 
             services.AddTransient<IUserService, Services.UserService>();

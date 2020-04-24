@@ -25,8 +25,6 @@ namespace AuthenticationServiceTest.Services
             string email = "ik.ben@mail.com";
             string password = "ASH!#hdjasf";
             _hasher = new AuthenticationService.Helpers.Hasher();
-            
-
         }
     }
 }

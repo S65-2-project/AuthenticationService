@@ -11,7 +11,6 @@ namespace AuthenticationServiceTest.Hasher
     {
         private IHasher _hasher;
         
-        
         public void setup()
         {
             _hasher = new AuthenticationService.Helpers.Hasher();

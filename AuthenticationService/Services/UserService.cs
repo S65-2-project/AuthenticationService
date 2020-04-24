@@ -19,11 +19,11 @@ namespace AuthenticationService.Services
         
         public async Task InsertRegisteredUser(Guid id, string email, string password)
         {
-            var tempEmail = await _repository.Get(email);
-            if (tempEmail != null) throw new ArgumentException("This email address is already in use, please use another email address.");
+            var userEmail = await _repository.Get(email);
+            if (userEmail != null) throw new ArgumentException("This email address is already in use, please use another email address.");
             
-            var tempId = await _repository.Get(id);
-            if (tempId != null) throw new ArgumentException("This email address is already in use, please use another email address.");
+            var userID = await _repository.Get(id);
+            if (userID != null) throw new ArgumentException("This email address is already in use, please use another email address.");
             
             //hash the password. 
             var salt = _hasher.CreateSalt();
@@ -36,7 +36,6 @@ namespace AuthenticationService.Services
                 Password = hashedPassword,
                 Salt = salt
             };
-            
             await _repository.Create(user);
 
         }
